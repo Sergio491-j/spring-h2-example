@@ -13,7 +13,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # COPIAMOS EL .JAR GENERADO DE LA COMPILACIÓN ANTERIOR
-COPY --from=build ./target/*.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 
